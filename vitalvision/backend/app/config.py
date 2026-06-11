@@ -27,7 +27,13 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3001",
         "http://localhost:3002",
         "http://127.0.0.1:3002",
+        # Vercel deployments — update FRONTEND_URL env var after deploying frontend
+        "https://vitalvision-final.vercel.app",
+        "https://vitalvision-frontend.vercel.app",
     ]
+
+    # Override via env var: FRONTEND_URL=https://your-app.vercel.app
+    frontend_url: str = ""
 
     secret_key: str = "vitalvision-dev-secret-change-in-production"
     access_token_expire_minutes: int = 1440
