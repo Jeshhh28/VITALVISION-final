@@ -1,0 +1,129 @@
+:root {
+  --bg-primary: #f6f8fb;
+  --bg-card: #ffffff;
+
+  --accent-teal: #0f766e;
+  --accent-blue: #2563eb;
+
+  --text-primary: #172033;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --success: #15803d;
+  --warning: #b45309;
+  --danger: #dc2626;
+  --info: #2563eb;
+
+  --border: #dbe3eb;
+  --border-bright: #b9c8d6;
+
+  --font-display: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
+
+  --radius: 8px;
+  --radius-lg: 10px;
+
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.07);
+  --transition: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent-teal);
+  color: white;
+  border-color: var(--accent-teal);
+}
+
+.btn-primary:hover {
+  background: #115e59;
+}
+
+.btn-outline {
+  background: white;
+  color: var(--accent-teal);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-teal);
+  background: #ecfdf5;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.status-normal {
+  color: var(--success);
+}
+
+.status-warning {
+  color: var(--warning);
+}
+
+.status-danger,
+.status-critical {
+  color: var(--danger);
+}
+
+.status-info {
+  color: var(--info);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 720px) {
+  .btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}

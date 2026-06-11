@@ -1,0 +1,1 @@
+"""VitalVision FastAPI application package."""
