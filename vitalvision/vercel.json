@@ -4,6 +4,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/health", "destination": "/api/index.py" },
+    { "source": "/analyse", "destination": "/api/index.py" },
+    { "source": "/quality-check", "destination": "/api/index.py" },
+    { "source": "/api/:path*", "destination": "/api/index.py" },
+    { "source": "/:path*", "destination": "/index.html" }
   ]
 }
